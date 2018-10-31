@@ -1,7 +1,7 @@
 # Ruby Sieve of Eratoosthenes
 
 class IsPrime
-  def sieve(max)
+  def self.sieve(max)
     # Set up an array with all the numbers between 0 and max
     primes = (0..max).to_a
 
@@ -27,7 +27,7 @@ class IsPrime
     primes.compact
   end
 
-  def prime?(num)
+  def self.prime?(num)
     sieve(num).include?(num)
   end
 
